@@ -1,4 +1,6 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ("megabacon");
-INSERT INTO burgers (burger_name, devoured) VALUES ("beefanator");
-INSERT INTO burgers (burger_name, devoured) VALUES ("kentucky classic");
-INSERT INTO burgers (burger_name, devoured) VALUES ("all-da-smoke");
+USE burgers_db;
+
+INSERT INTO burgers (burger_name, devoured) VALUES ("megabacon", false);
+INSERT INTO burgers (burger_name, devoured) VALUES ("beefanator", false);
+INSERT INTO burgers (burger_name, devoured) VALUES ("kentucky classic", false);
+INSERT INTO burgers (burger_name, devoured) VALUES ("all-da-smoke", false);
