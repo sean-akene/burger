@@ -11,5 +11,6 @@ if (process.env.JAWSDB_URL) {
     database: "burger_db",
   });
 }
+console.log(connection);
 connection.connect();
 module.exports = connection;
