@@ -1,4 +1,4 @@
-const { Router } = require("express");
+// const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
 
@@ -45,7 +45,7 @@ router.put("/api/burgers/:id", function (req, res) {
         },
         condition,
         function(result){
-        if(result.changedRows == 0) {
+        if(!result.changedRows === 0) {
             return res.status(404).end();
         } else {
             res.status(200).end();
