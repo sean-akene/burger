@@ -9,11 +9,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Setting up all the routes and the logic
 
-router.get("/", function(req, res) {
-    res.redirect("/burgers");
-  });
+// router.get("/", function(req, res) {
+//     res.redirect("/burgers");
+//   });
 
-router.get("/burgers",  function (req, res) {
+router.get("/",  function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {
             burger_data: data
@@ -23,7 +23,7 @@ router.get("/burgers",  function (req, res) {
     });
 });
 
-router.post("/api/burgers/create", function (req, res) {
+router.post("/api/burgers", function (req, res) {
     burger.insertOne(
         ["burger_name", "devoured"],
     [req.body.burger, false],
