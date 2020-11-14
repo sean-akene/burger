@@ -2,6 +2,7 @@ const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
 
+var path = require("path");
 var burger = require("../models/burger.js");
 var app = express();
 app.use(express.static(path.join(__dirname, "public")));
